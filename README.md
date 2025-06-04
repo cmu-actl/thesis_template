@@ -1,6 +1,6 @@
 # ACTL Ph.D. Thesis Template
 
-You can fork this repository to start your thesis. It contains a basic skeleton structure built from [this CMU ECE thesis template](https://github.com/vzaliva/cmu-ece-thesis-template) and modified by Ruben Purdy (rpurdy@andrew.cmu.edu) to match the style of previous ACTL students. For posterity, the changes to [cmu-ece-thesis.sty](/cmu-ece-thesis.sty) have been marked with comments starting with `ACTL:`.
+You can [use this repository template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to start your thesis. It contains a basic skeleton structure built from [this CMU ECE thesis template](https://github.com/vzaliva/cmu-ece-thesis-template) and modified by Ruben Purdy (rpurdy@andrew.cmu.edu) to match the style of previous ACTL students. For posterity, the changes to [cmu-ece-thesis.sty](/cmu-ece-thesis.sty) have been marked with comments starting with `ACTL:`.
 
 The template also contains an example of how to organize sections/subsections into separate files using the `\subimport` command from the [import](https://ctan.org/pkg/import) package which allows relative path imports. [This Overleaf help page](https://www.overleaf.com/learn/latex/Management_in_a_large_project) has some tips for organizing large projects and motivates the use of the `import` package over other methods.
 
