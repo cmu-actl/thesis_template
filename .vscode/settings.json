@@ -1,0 +1,10 @@
+{
+    "latex-workshop.latex.external.build.args": [
+        "-latexoption=-shell-escape"
+    ],
+    "latex-workshop.formatting.latex": "tex-fmt",
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+}
