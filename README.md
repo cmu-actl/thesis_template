@@ -6,7 +6,7 @@ The template also contains an example of how to organize sections/subsections in
 
 It's recommended to use [VSCode](https://code.visualstudio.com) as the text editor, as it has good Latex preview support and also integrates Copilot for writing suggestions. As a student, you can get Copilot Pro by following [these instructions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-as-an-individual-subscriber/getting-started-with-copilot-on-your-personal-account/getting-free-access-to-copilot-pro-as-a-student-teacher-or-maintainer). For a large document like a thesis, building the LaTeX on your local computer can be a lot faster than using Overleaf.
 
-If you are using VSCode, or otherwise writing/building your thesis locally, you'll need to install a version of Latex. This repo has been tested using [TeX Live](https://www.tug.org/texlive/).
+If you are using VSCode, or otherwise writing/building your thesis locally, you'll need to install a version of Latex. This repo has been tested using [TeX Live](https://www.tug.org/texlive/). If you want autoformatting (which is recommended), you also need to install [tex-fmt](https://github.com/WGUNDERWOOD/tex-fmt?tab=readme-ov-file#installation). Otherwise, you can remove this setting from [.vscode/settings.json](/.vscode/settings.json): `"latex-workshop.formatting.latex": "tex-fmt"`.
 
 These extensions are recommended for VSCode:
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
