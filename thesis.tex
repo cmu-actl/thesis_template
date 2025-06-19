@@ -26,17 +26,16 @@
 \usepackage{import}
 
 \usepackage{epstopdf}
-
-\usepackage[toc]{glossaries}
-\makeglossaries
-\loadglsentries{glossary}
-
 % The following option used to avoid PDF version mismatch warnings.
 % it require `-shell-escape` command line option for `pdflatex`
 % which is present in our `Makefile` and `.vscode/settings.json` Latex build arg setting.
 \epstopdfDeclareGraphicsRule{.eps}{pdf}{.pdf}{%
   epstopdf --gsopt=-dCompatibilityLevel=1.5 #1
 --outfile=\OutputFile}
+
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+\loadglsentries{glossary}
 
 \usepackage[numbers]{natbib}
 \usepackage[backref,pageanchor=true,plainpages=false, pdfpagelabels, bookmarks,bookmarksnumbered,
@@ -75,6 +74,10 @@
   language=C
 }
 
+% You can use this command to leave FIXME notes for yourself in the text:
+% e.g., '\fixme{add more details here}'
+\newcommand{\fixme}[1]{\textcolor{red}{\textbf{FIXME:} #1}}
+
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 
 %% Uncomment this if you want a draft
@@ -112,7 +115,7 @@
 
 \renewcommand{\thesisdedication}{To Charles Babbage.}
 
-% Update this if you have more than 4 committee members (including Prof. Blanton).
+% Update this if you have more than 4 committee members (including your supervisor).
 \renewcommand{\thesiscommitteesize}{4}
 
 %%%
@@ -139,9 +142,10 @@
 \import{../sections}{body.tex}
 
 % By default, the `glossaries` package only prints items that you 'reference' in the text.
-% To prevent having to do that, this command prints all 'unreferenced' glossary entries.
+% To prevent having to do that, this command adds all 'unreferenced' glossary entries.
 \glsaddallunused
-\printglossaries
+\printglossary[type=main]
+\printglossary[type=\acronymtype,title={Acronyms}]
 
 \addcontentsline {toc}{chapter}{Bibliography}
 \bibliographystyle{ieeetr}
