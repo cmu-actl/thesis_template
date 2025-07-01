@@ -1,3 +1,4 @@
+# LaTeX outputs and temporary files
 *.aux
 *.bbl
 *.blg
@@ -7,7 +8,10 @@
 *.log
 *.lot
 *.out
-*.pdf
 *.toc
 *.brf
-build/
+# Top-level PDFs
+/*.pdf
+# Include main thesis PDF
+/build/*
+!/build/thesis.pdf

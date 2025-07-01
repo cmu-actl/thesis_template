@@ -2,6 +2,8 @@
 
 You can [use this repository template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) to start your thesis. It contains a basic skeleton structure built from [this CMU ECE thesis template](https://github.com/vzaliva/cmu-ece-thesis-template) and modified by Ruben Purdy (rpurdy@andrew.cmu.edu) to match the style of previous ACTL students. For posterity, the changes to [cmu-ece-thesis.sty](/cmu-ece-thesis.sty) have been marked with comments starting with `ACTL:`.
 
+The thesis PDF is stored at [build/thesis.pdf](/build/thesis.pdf).
+
 ## Thesis Structure
 
 The template  contains an example of how to organize sections/subsections into separate files using the `\subimport` command from the [import](https://ctan.org/pkg/import) package which allows relative path imports. [This Overleaf help page](https://www.overleaf.com/learn/latex/Management_in_a_large_project) has some tips for organizing large projects and motivates the use of the `import` package over other methods.
@@ -34,3 +36,9 @@ GitHub Copilot will suggest completions when you're writing. You can also use ch
 ### Other
 
 If you'd like to manually build your thesis, you can use the included [Makefile](/Makefile). Running `make` will output the thesis to `build/thesis.pdf`.
+
+## Pre-commit
+
+There's a pre-commit config that will build the PDF before committing to make sure the PDF is up to date before you commit/push. To use it, first [install pre-commit](https://pre-commit.com/#install) (alternatively, you can install [pipx](https://pipx.pypa.io/stable/installation/#installing-pipx) then run `pipx install pre-commit` to install in a clean environment).
+
+Then, run `pre-commit install` to install the hooks.
